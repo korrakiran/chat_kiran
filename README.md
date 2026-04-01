@@ -55,9 +55,7 @@ The project is structure-ready for Vercel:
 
 ## Environment Variables (.env)
 ```env
-DATABASE_URL=postgresql://user:password@localhost:5432/aichatapp
-GOOGLE_CLIENT_ID=your_id
-GOOGLE_CLIENT_SECRET=your_secret
+
 SARVAM_API_KEY=your_key
-JWT_SECRET=your_jwt_secret
+
 ```
