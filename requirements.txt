@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic-settings
+python-multipart
+python-dotenv
+httpx
+pytesseract
+PyMuPDF
+Pillow
