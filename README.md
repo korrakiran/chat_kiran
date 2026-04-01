@@ -1,61 +1,64 @@
-# BeeBot - Premium AI Chat App
+# ✍️ BeeBot: Your AI Writing Companion
 
-A full-stack AI chat application inspired by ChatGPT, featuring real-time streaming, multimodal processing (OCR/PDF), and persistent memory.
+BeeBot is a premium, minimalist AI writing workspace designed for effortless drafting, professional editing, and stylistic refinement. Built with a focus on high-performance streaming and executive-level typography, it serves as an elite assistant for writers, editors, and communication strategists.
 
-## Tech Stack
-- **Backend:** FastAPI (Python) - *Vercel Deployment Compatibility Added*
-- **Frontend:** Next.js (React) + Lucide Icons
-- **Database:** Hosted PostgreSQL (e.g., **Neon.tech** or **Supabase**) - *Recommended for Vercel*
-- **AI Engine:** Sarvam AI (sarvam-105b)
-- **OCR:** Tesseract + PyMuPDF
+![Screenshot](https://via.placeholder.com/1200x600/6366f1/ffffff?text=BeeBot+Writing+Assistant)
 
-## Project Structure
-```text
-/
-├── backend/            # FastAPI - Backend functions
-├── frontend/           # Next.js - Client application
-└── README.md
-```
+## ✨ Features
 
-## Getting Started
+- **🚀 Real-Time Streaming**: Instant, token-by-token response generation with zero initial latency.
+- **🧬 On-The-Fly Filtering**: Intelligent background reasoning (think tags) is stripped live, keeping your workspace clean and professional.
+- **🖋️ Premium Typography**: A custom design system using **Inter** (weights 400-800) for UI/Content and **JetBrains Mono** for technical elements.
+- **🛠️ Specialized Writing Modes**: Optimized for:
+  - Professional Email Drafting
+  - Essay Polishing & Structural Improvement
+  - Creative Storytelling & Narrative Flow
+  - Headline & Content Generation
+- **📋 One-Click Export**: Rapid copy buttons for entire responses or individual code snippets.
+- **📱 Responsive Minimalist UI**: A distraction-free, single-pane focus mode that adapts to your workflow.
 
-### 1. Database
-Instead of Docker, use a hosted database like **Neon.tech** or **Supabase**. Get your `DATABASE_URL` from their dashboards.
+## 🛠️ Technology Stack
+
+- **Frontend**: Next.js, React, Lucide Icons, React-Markdown.
+- **Backend**: FastAPI (Python), Httpx, Pydantic.
+- **AI Model**: Sarvam-M (Optimized for long-form, high-quality generation).
+- **Communication**: Server-Sent Events (SSE) for seamless streaming.
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+- Python 3.9+
+- Node.js 18+
+- Sarvam AI API Key
 
 ### 2. Backend Setup
-1. Navigate to `/backend`.
-2. Add your `SARVAM_API_KEY` and `DATABASE_URL` to a `.env` file.
-3. Install dependencies:
 ```bash
+# Navigate to project root
+cd aichatapp
+
+# Setup virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
-```
-4. Start locally:
-```bash
-uvicorn app.main:app --reload
+
+# Create .env and add your API key
+echo "SARVAM_API_KEY=your_key_here" > backend/.env
+
+# Start the server
+python3 -m uvicorn backend.app.main:app --reload
 ```
 
 ### 3. Frontend Setup
-1. Navigate to `/frontend`.
-2. Update the API URL in your components or environment if needed.
-3. Run the development server:
 ```bash
+cd frontend
+npm install
 npm run dev
 ```
 
-## Vercel Deployment
-The project is structure-ready for Vercel:
-1. **Frontend**: Deploy with `npm run build`.
-2. **Backend**: Add `vercel.json` as provided, connect to your hosted PostgreSQL via environment variables.
+### 4. Open the App
+Visit [http://localhost:3000](http://localhost:3000) to start writing!
 
-## Key Features
-- **SSE Streaming:** Real-time token progressive rendering.
-- **Multimodal Uploads:** Drag-and-drop Images/PDFs for automated context extraction.
-- **Memory Layer:** User preferences and past conversation context injected into prompts.
-- **Modern UI:** Glassmorphic design with a premium feel and smooth animations.
-
-## Environment Variables (.env)
-```env
-
-SARVAM_API_KEY=your_key
-
-```
+## 📜 License
+MIT License. Created by [Kiran](https://github.com/korrakiran).
