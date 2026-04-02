@@ -90,7 +90,8 @@ export default function App() {
     setIsStreaming(true);
 
     try {
-      const response = await fetch(`http://localhost:8000/chat/default/message`, {
+      const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+      const response = await fetch(`${API_BASE}/chat/default/message`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ content: currentInput })
